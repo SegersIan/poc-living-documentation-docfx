@@ -13,8 +13,9 @@ try {
     saveJSONFile(destinationFile, JSON.stringify({
         _classes: {
             "**.*" : fileContents
-        }
+        } 
     }, null, 4))
+    console.log(`File ${destinationFile} created with metadata of all classes.`)
 } catch (e) {
     console.error(e);
 }
