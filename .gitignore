@@ -1,0 +1,8 @@
+.vs/
+documentation/_site
+**/node_modules/**
+**/obj/**
+**/bin/**
+documentation/api/*
+documentation/all-classes.json
+documentation/api_metadata.json
