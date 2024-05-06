@@ -1,0 +1,15 @@
+{{#dataContractView}}
+
+
+  <h1>Event: {{eventName}}</h1>
+  {{#isDeprecated }}
+  <div>Warning - This event is deprecated: {{isDeprecatedMessage}}</div>
+  {{/isDeprecated }}
+  <div class="codewrapper">
+<pre>{<code class="lang-csharp hljs">{{#allMembers}}{{name}}: {{type}},
+{{/allMembers}}</code>}</pre></div>
+
+// TODO: How to fetch other classes their information
+// Preprocess step somehow.
+
+{{/dataContractView}}

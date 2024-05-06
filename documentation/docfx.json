@@ -1,0 +1,49 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "src": "../src",
+          "files": [
+            "**/*.csproj"
+          ]
+        }
+      ],
+      "dest": "api"
+    }
+  ],
+  "build": {
+    "fileMetadataFiles": ["all-classes.json"],
+    "content": [
+      {
+        "files": [
+          "**/*.{md,yml}"
+        ],
+        "exclude": [
+          "_site/**",
+          "**/node_modules/**"
+        ],
+        "memberLayout": "samePage",
+        "namespaceLayout" : "flattened"
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "images/**"
+        ]
+      }
+    ],
+    "output": "_site",
+    "template": [
+      "default",
+      "custom-template"
+    ],
+    "globalMetadata": {
+      "_appName": "mysite",
+      "_appTitle": "mysite",
+      "_enableSearch": false,
+      "pdf": false
+    }
+  }
+}

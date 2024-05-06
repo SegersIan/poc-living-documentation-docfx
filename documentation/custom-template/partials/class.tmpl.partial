@@ -1,0 +1,48 @@
+{{!Licensed to the .NET Foundation under one or more agreements. The .NET Foundation licenses this file to you under the MIT license.}}
+
+{{#customData}}
+
+  <h1>Event: {{general.eventName}}</h1>
+  {{#general.isDeprecatedEvent }}
+    <div style="background-color:red; color: white; padding: 1rem; margin-bottom: 1rem">
+      This event is deprecated: {{general.isDeprecatedEventMessage}}
+    </div>
+  {{/general.isDeprecatedEvent }}
+
+  <hr>
+
+  <h2>Overview</h2>
+  <div class="event-data-model">
+      {{#jsonView.lines}}
+        {{{.}}}<br/>
+      {{/jsonView.lines}}
+  </div>
+
+  <hr>
+
+  <h2>Details</h2>
+
+  <table>
+    <tr>
+      <th> Name </th>
+      <th> Type </th>
+      <th> Summary </th>
+      <th> Info </th>
+      <th> Deprecated? </th>
+      <th> Deprecation Reason </th>
+    </tr>
+
+    {{#tableView.lines}}
+      <tr>
+        <td> {{{name}}} </td>
+        <td> {{{type}}} </td>
+        <td> {{{summary}}} </td>
+        <td> {{{information}}} </td>
+        <td> {{{isDeprecated}}} </td>
+        <td> {{{isDeprecatedMessage}}} </td>
+      </tr>
+    {{/tableView.lines}}
+
+  </table>
+
+{{/customData}}
