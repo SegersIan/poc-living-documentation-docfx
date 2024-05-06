@@ -22,6 +22,8 @@ exports.preTransform = function (model) {
   return model;
 }
 
+// TODO: Left - Fix some reuse.
+
 // This method will be called at the end of exports.transform in ManagedReference.html.primary.js
 exports.postTransform = function (model) {
   if(!model.isClass) return model;
